@@ -40,7 +40,7 @@ Install requirements
 pip install -r requirements.txt
 ```
 
-Start the app on port 8080 (default value)
+Start the app on port 80 (default value)
 
 ```
 python src/main.py
@@ -54,19 +54,22 @@ python src/main.py --port <port> --model-path <path_to_mode>
 
 ###  Using docker
 
+You can use existing Dockerfile in this repo. 
+It has all necessary commands to run this server. It uses `80` as default.
+
 Build docker
 
 ```angular2html
 sudo docker build . -t server
 ```
 
-Start docker and pass 8080 port
+Start docker and pass 80 port
 
 ```angular2html
-sudo docker run -p 8080:8080 -t server
+sudo docker run -p 80:80 -t server
 ```
 
-Congratulations! Your application is running on port 8080
+Congratulations! Your application is running on port 80
 
 ## Request
 
@@ -93,3 +96,9 @@ List of supported arguments:
 | agent_fee     | float |
 | renovation    | bool  |
 | offer_type    | int   |
+
+## Open port on a remote machine
+
+```angular2html
+sudo ufw allow 80
+```

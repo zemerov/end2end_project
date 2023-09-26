@@ -10,7 +10,7 @@ FEATURE_NAMES = [
 ]
 
 parser = ArgumentParser()
-parser.add_argument("--port", type=int, default=8080, help="Port for serving requests")
+parser.add_argument("--port", type=int, default=80, help="Port for serving requests")
 parser.add_argument("--model-path", type=str, default='data/catboost_predictor')
 
 args = parser.parse_args()
